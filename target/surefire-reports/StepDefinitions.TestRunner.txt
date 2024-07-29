@@ -1,0 +1,18 @@
+-------------------------------------------------------------------------------
+Test set: StepDefinitions.TestRunner
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 34.40 s <<< FAILURE! -- in StepDefinitions.TestRunner
+Validating place API's.Verify if place is being Succesfully added using AddPlaceAPI -- Time elapsed: 2.402 s <<< ERROR!
+java.lang.NumberFormatException: For input string: "[name:hipo, website:http://hipolabs.com]"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.base/java.lang.Integer.parseInt(Integer.java:652)
+	at java.base/java.lang.Integer.parseInt(Integer.java:770)
+	at java_lang_Integer$parseInt.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
+	at io.restassured.internal.common.path.ObjectConverter.convertObjectTo(ObjectConverter.groovy:29)
+	at io.restassured.path.json.JsonPath.getInt(JsonPath.java:245)
+	at StepDefinitions.AddPlaceAPI.add_place_payload(AddPlaceAPI.java:26)
+	at ✽.Add Place Payload(file:///C:/Users/rahulvaid/Automation%20repos/Main_GIT/CucumberJava/src/test/resources/Features/placeValidations.feature:6)
+
