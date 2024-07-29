@@ -5,6 +5,7 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 
 public class PageObjects {
 
@@ -21,7 +22,9 @@ public class PageObjects {
         return (List<WebElement>) driver.findElement(products);
     }
 
-    By carticon = By.xpath("//a[@class='cart-icon']");
+//    By carticon = By.xpath("//a[@class='cart-icon']");
+    @FindBy(xpath="//a[@class='cart-icon']")
+        WebElement carticon;
 
 
     By cartPreviewAactive=By.xpath("//div[@class ='cart-preview active']/div[2]/button");
@@ -37,7 +40,7 @@ public class PageObjects {
 
     public WebElement carticon() {
 
-        return driver.findElement(carticon);
+        return carticon;
     }
 
     public WebElement cartPreviewAactive() {
